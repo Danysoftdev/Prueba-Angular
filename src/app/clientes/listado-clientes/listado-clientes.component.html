@@ -1,0 +1,9 @@
+<h2>Listado clientes</h2>
+<mat-card *ngIf="!clientes.length">No hay clientes por el momento</mat-card>
+<mat-list *ngIf="clientes.length">
+  <mat-list-item *ngFor="let cliente of clientes">
+    <span matLine>{{ cliente.nombre }}</span>
+    <span matLine>{{ cliente.direccion }}</span>
+    <span matLine>{{ cliente.grupo }}</span>
+  </mat-list-item>
+</mat-list>

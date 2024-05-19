@@ -1,0 +1,24 @@
+<h2>Alta cliente</h2>
+<p>
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="cliente.nombre">
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field>
+    <mat-label>Dirección</mat-label>
+    <input matInput [(ngModel)]="cliente.direccion">
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field>
+    <mat-label>Grupo</mat-label>
+    <mat-select [(ngModel)]="cliente.grupo">
+      <mat-option *ngFor="let grupo of grupos" [value]="grupo.id">{{ grupo.nombre }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</p>
+<p>
+  <button mat-raised-button (click)="newCliente()">Guardar</button>
+</p>
